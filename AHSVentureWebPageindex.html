@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHS Venture Limited — Strategic Agro-Trade Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0C1B33;
+  --navy-2: #142444;
+  --navy-3: #1C3060;
+  --red: #C8102E;
+  --red-mid: #E31837;
+  --blue: #1B4FA8;
+  --blue-light: #2A67D0;
+  --cream: #F4F1EC;
+  --offwhite: #FAF8F5;
+  --gold: #B8960C;
+  --gold-light: #D4AC0D;
+  --white: #FFFFFF;
+  --muted: #6B7A8D;
+  --border-light: rgba(255,255,255,0.12);
+  --border-dark: rgba(12,27,51,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "DM Sans", sans-serif; background: var(--offwhite); color: var(--navy); overflow-x: hidden; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--red); }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  background: rgba(12,27,51,0.98);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%; height: 76px;
+}
+
+.logo-wrap {
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 48px; width: auto;
+  border-radius: 3px;
+  object-fit: contain;
+  background: white;
+  padding: 3px 6px;
+}
+
+.logo-sep {
+  width: 1px; height: 34px;
+  background: rgba(255,255,255,0.2);
+}
+
+.logo-tagline {
+  font-size: 10px; font-weight: 400;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  max-width: 120px;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 11.5px; font-weight: 500;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--red-mid);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover { color: white; }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: var(--red) !important;
+  color: white !important;
+  padding: 10px 22px !important;
+  border-radius: 3px;
+  font-weight: 600 !important;
+  letter-spacing: 1.2px !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--red-mid) !important; }
+.nav-cta::after { display: none !important; }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 6px;
+}
+.hamburger span { width: 22px; height: 2px; background: white; display: block; transition: all 0.3s; }
+
+/* ── HERO ── */
+#home {
+  min-height: 100vh;
+  background: var(--navy);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+}
+
+.hero-bg-elements {
+  position: absolute; inset: 0; pointer-events: none;
+}
+
+.hero-circle-1 {
+  position: absolute; top: -15%; right: -8%;
+  width: 640px; height: 640px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,16,46,0.18) 0%, transparent 70%);
+}
+
+.hero-circle-2 {
+  position: absolute; bottom: -20%; left: -5%;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27,79,168,0.22) 0%, transparent 70%);
+}
+
+.hero-lines {
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg, transparent, transparent 79px,
+    rgba(255,255,255,0.025) 79px, rgba(255,255,255,0.025) 80px
+  );
+}
+
+.hero-bar {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, var(--blue), var(--red), var(--blue));
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 120px 5% 80px;
+  max-width: 900px;
+  animation: heroIn 1s ease 0.1s both;
+}
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-bottom: 36px;
+}
+
+.eyebrow-dot {
+  width: 8px; height: 8px;
+  background: var(--red-mid);
+  border-radius: 50%;
+  animation: blink 2s ease infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+
+.eyebrow-text {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5.5vw, 78px);
+  font-weight: 700;
+  line-height: 1.08;
+  color: white;
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+h1 span.accent { color: var(--red-mid); font-style: italic; }
+h1 span.b-accent { color: #5A9FFF; }
+
+.hero-desc {
+  font-size: clamp(15px, 1.7vw, 17px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.85;
+  max-width: 560px;
+  margin-bottom: 52px;
+}
+
+.hero-btns {
+  display: flex; gap: 14px; flex-wrap: wrap;
+}
+
+.btn-red {
+  background: var(--red);
+  color: white;
+  padding: 15px 34px;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 1.8px; text-transform: uppercase;
+  text-decoration: none; border-radius: 3px;
+  transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-red:hover { background: var(--red-mid); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(200,16,46,0.4); }
+
+.btn-outline {
+  background: transparent; color: white;
+  padding: 15px 34px;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 1.8px; text-transform: uppercase;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 3px; transition: all 0.25s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+
+.hero-stats {
+  position: absolute; right: 5%; bottom: 80px;
+  display: flex; flex-direction: column; gap: 2px;
+  animation: heroIn 1s ease 0.4s both;
+}
+
+.h-stat {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-light);
+  padding: 18px 24px;
+  border-radius: 4px;
+  min-width: 200px;
+  transition: background 0.3s;
+}
+.h-stat:hover { background: rgba(255,255,255,0.1); }
+
+.h-stat-num {
+  font-family: "Playfair Display", serif;
+  font-size: 28px; font-weight: 700;
+  color: white; line-height: 1;
+  margin-bottom: 4px;
+}
+
+.h-stat-label {
+  font-size: 10px; font-weight: 400;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+
+.scroll-hint {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: rgba(255,255,255,0.25); font-size: 9px;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  animation: heroIn 1s ease 0.8s both;
+}
+.scroll-track { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--red), transparent); animation: scrollAnim 2.2s ease infinite; }
+@keyframes scrollAnim { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+/* ── SECTIONS ── */
+section { padding: 110px 5%; }
+
+.sec-label {
+  display: flex; align-items: center; gap: 12px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px; font-weight: 500;
+  color: var(--red); letter-spacing: 2.5px;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.sec-label::before { content: ""; width: 28px; height: 2px; background: var(--red); }
+
+.sec-label.light { color: rgba(255,255,255,0.5); }
+.sec-label.light::before { background: rgba(255,255,255,0.3); }
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 700; line-height: 1.12; letter-spacing: -0.3px;
+}
+h2.dark { color: var(--navy); }
+h2.light { color: white; }
+
+/* ── ABOUT ── */
+#about { background: var(--offwhite); }
+
+.about-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start;
+}
+
+.about-l h2 { margin-bottom: 28px; color: var(--navy); }
+
+.about-body {
+  font-size: 16px; font-weight: 300; line-height: 1.92; color: #4A5568;
+  margin-bottom: 48px;
+}
+
+.stat-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  border: 1px solid var(--border-dark);
+}
+
+.stat-cell {
+  padding: 24px 22px; background: white;
+  transition: all 0.3s; cursor: default;
+}
+.stat-cell:hover { background: var(--navy); }
+.stat-cell:hover .sc-label { color: var(--red); }
+.stat-cell:hover .sc-val { color: white; }
+
+.sc-label {
+  font-family: "DM Mono", monospace;
+  font-size: 9px; font-weight: 500; color: var(--red);
+  letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 7px; transition: color 0.3s;
+}
+.sc-val {
+  font-size: 14px; font-weight: 500; color: var(--navy);
+  line-height: 1.5; transition: color 0.3s;
+}
+
+.network-card {
+  background: var(--navy);
+  border-radius: 6px; overflow: hidden;
+  min-height: 440px; display: flex; flex-direction: column;
+}
+
+.nc-header {
+  background: var(--red);
+  padding: 20px 28px;
+  display: flex; align-items: center; gap: 12px;
+}
+.nc-header-title {
+  font-family: "DM Mono", monospace;
+  font-size: 11px; font-weight: 500;
+  color: white; letter-spacing: 2px; text-transform: uppercase;
+}
+
+.nc-body { padding: 32px 28px; flex: 1; }
+
+.nc-primary {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 20px;
+  background: rgba(255,255,255,0.08);
+  border-left: 3px solid var(--red);
+  border-radius: 4px; margin-bottom: 24px;
+}
+.nc-p-flag { font-size: 28px; }
+.nc-p-label { font-size: 9px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.nc-p-name { font-size: 17px; font-weight: 600; color: white; }
+
+.nc-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.nc-country {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px; font-size: 13px; font-weight: 400;
+  color: rgba(255,255,255,0.7); transition: all 0.2s;
+}
+.nc-country:hover { background: rgba(255,255,255,0.1); color: white; }
+.nc-country .flag { font-size: 18px; }
+
+/* ── SERVICES ── */
+#services { background: var(--navy); position: relative; overflow: hidden; }
+
+#services::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(200,16,46,0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.services-hd { max-width: 540px; margin-bottom: 64px; position: relative; }
+
+.srv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; position: relative; }
+
+.srv-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 50px 36px; position: relative; overflow: hidden;
+  transition: all 0.35s;
+}
+
+.srv-card::after {
+  content: "";
+  position: absolute; inset: 0; top: auto;
+  height: 3px;
+  background: linear-gradient(to right, var(--red), var(--blue-light));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s;
+}
+.srv-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+.srv-card:hover::after { transform: scaleX(1); }
+
+.srv-num {
+  font-family: "Playfair Display", serif;
+  font-size: 64px; font-weight: 700;
+  color: rgba(255,255,255,0.06); line-height: 1;
+  margin-bottom: 20px; display: block;
+}
+
+.srv-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+
+.srv-title {
+  font-size: 16px; font-weight: 600;
+  color: white; letter-spacing: 0.3px;
+  margin-bottom: 14px; line-height: 1.3;
+}
+
+.srv-desc {
+  font-size: 14px; font-weight: 300;
+  color: rgba(255,255,255,0.5); line-height: 1.85;
+}
+
+/* ── LEADERSHIP ── */
+#leadership { background: var(--cream); }
+
+.lead-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 80px; align-items: center; }
+
+.lead-visual {
+  position: relative;
+}
+
+.lead-box {
+  background: var(--navy);
+  border-radius: 8px; aspect-ratio: 3/4;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+
+.lead-box::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 30% 70%, rgba(200,16,46,0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(27,79,168,0.3) 0%, transparent 50%);
+}
+
+.lead-crest {
+  position: relative; z-index: 2; text-align: center; padding: 30px;
+}
+.lead-crest-icon { font-size: 72px; display: block; margin-bottom: 20px; filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5)); }
+.lead-crest-text {
+  font-family: "Playfair Display", serif;
+  font-size: 13px; color: rgba(255,255,255,0.6);
+  letter-spacing: 2.5px; text-transform: uppercase;
+}
+
+.lead-badge {
+  position: absolute; bottom: -18px; right: -18px;
+  width: 90px; height: 90px; border-radius: 50%;
+  background: var(--red); display: flex; align-items: center;
+  justify-content: center; flex-direction: column; text-align: center;
+  box-shadow: 0 8px 28px rgba(200,16,46,0.45);
+}
+.lb-txt { font-size: 8.5px; font-weight: 600; color: white; letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.4; }
+
+.lead-right h2 { margin-bottom: 20px; }
+
+.lead-intro { font-size: 16px; font-weight: 300; color: #4A5568; line-height: 1.9; margin-bottom: 44px; }
+
+.pillars { display: flex; flex-direction: column; gap: 18px; }
+
+.pillar {
+  display: flex; gap: 18px;
+  background: white; padding: 22px 24px;
+  border-left: 3px solid var(--navy);
+  transition: all 0.3s;
+}
+.pillar:hover { border-color: var(--red); box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
+
+.pillar-ico {
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: var(--navy); border-radius: 4px;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+
+.p-title { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: 0.5px; margin-bottom: 5px; text-transform: uppercase; }
+.p-body { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.7; }
+
+/* ── VISION ── */
+#vision {
+  background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 60%, #0A1626 100%);
+  position: relative; overflow: hidden;
+}
+
+#vision::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 85% 40%, rgba(27,79,168,0.2) 0%, transparent 55%),
+              radial-gradient(ellipse at 10% 80%, rgba(200,16,46,0.15) 0%, transparent 45%);
+}
+
+.vmv-header { margin-bottom: 60px; position: relative; }
+
+.vmv-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; position: relative; }
+
+.vmv-card { padding: 44px 36px; border: 1px solid rgba(255,255,255,0.08); }
+
+.vmv-tag {
+  font-family: "DM Mono", monospace;
+  font-size: 9px; font-weight: 500;
+  color: var(--red-mid); letter-spacing: 2.5px;
+  text-transform: uppercase; display: block; margin-bottom: 16px;
+}
+
+.vmv-heading {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(18px, 2vw, 24px); font-weight: 600;
+  color: white; line-height: 1.3; margin-bottom: 16px;
+}
+
+.vmv-body { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.85; }
+
+.vals-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.val-item { display: flex; gap: 12px; align-items: flex-start; }
+.val-dot { width: 6px; height: 6px; background: var(--red-mid); border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.val-title { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 3px; }
+.val-desc { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.65; }
+
+/* ── PARTNERSHIPS ── */
+#partnerships { background: var(--offwhite); text-align: center; }
+
+.pt-inner { max-width: 720px; margin: 0 auto; }
+
+.pt-txt { font-size: 17px; font-weight: 300; color: #4A5568; line-height: 1.9; margin: 24px 0 44px; }
+
+.pt-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 48px; }
+
+.pt-tag {
+  padding: 9px 20px; border: 1.5px solid rgba(12,27,51,0.18);
+  border-radius: 100px; font-size: 12px; font-weight: 500;
+  color: var(--navy); letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+.pt-tag:hover { border-color: var(--red); color: var(--red); }
+
+/* ── CONTACT ── */
+#contact { background: var(--navy); padding-bottom: 0; }
+
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; padding-bottom: 80px; }
+
+.contact-l h2 { margin-bottom: 22px; }
+.contact-intro { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.9; margin-bottom: 44px; }
+
+.c-items { display: flex; flex-direction: column; gap: 20px; }
+.c-item { display: flex; gap: 16px; align-items: flex-start; }
+.c-ico {
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: rgba(200,16,46,0.15); border: 1px solid rgba(200,16,46,0.3);
+  border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 16px;
+}
+.c-label { font-family: "DM Mono", monospace; font-size: 9px; color: var(--red-mid); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+.c-val { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.65; }
+.c-val a { color: #7EB3FF; text-decoration: none; }
+
+.form-box {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px; padding: 40px;
+}
+
+.form-title { font-size: 18px; font-weight: 600; color: white; margin-bottom: 28px; letter-spacing: 0.3px; }
+
+.fg { margin-bottom: 18px; }
+.fg label { font-family: "DM Mono", monospace; font-size: 9px; font-weight: 500; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+
+.fg input, .fg select, .fg textarea {
+  width: 100%; background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;
+  padding: 13px 16px; color: white;
+  font-family: "DM Sans", sans-serif; font-size: 14px; font-weight: 300;
+  outline: none; transition: border-color 0.2s;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--red); }
+.fg select option { background: var(--navy); color: white; }
+.fg textarea { resize: vertical; min-height: 100px; }
+
+.fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.btn-submit {
+  width: 100%; background: var(--red); color: white;
+  padding: 15px; font-size: 12px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  border: none; border-radius: 4px; cursor: pointer;
+  transition: all 0.25s; margin-top: 6px;
+}
+.btn-submit:hover { background: var(--red-mid); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,16,46,0.4); }
+
+footer {
+  background: rgba(0,0,0,0.35);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 26px 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px;
+}
+.ft-copy { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.3); }
+.ft-web a { font-size: 12px; color: rgba(255,255,255,0.45); text-decoration: none; }
+.ft-web a:hover { color: var(--red-mid); }
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .about-wrap, .lead-grid { grid-template-columns: 1fr; gap: 52px; }
+  .srv-grid { grid-template-columns: 1fr 1fr; }
+  .vmv-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { display: none; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 76px; left: 0; right: 0;
+    background: var(--navy); padding: 24px; gap: 20px;
+    border-top: 1px solid var(--border-light); z-index: 999;
+  }
+  .nav-links.open .nav-cta { display: block; text-align: center; }
+  .hamburger { display: flex; }
+  section { padding: 70px 4%; }
+  .srv-grid { grid-template-columns: 1fr; }
+  .vmv-grid { grid-template-columns: 1fr; }
+  .contact-wrap { grid-template-columns: 1fr; gap: 52px; }
+  .fg-row { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-btns { flex-direction: column; }
+  .btn-red, .btn-outline { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="logo-wrap">
+    <img src="data:image/jpeg;base64,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" alt="AHS Venture Limited" class="logo-img">
+    <div class="logo-sep"></div>
+    <div class="logo-tagline">Strategic Trade Partners</div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#contact" class="nav-cta">Partner With Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-elements">
+    <div class="hero-circle-1"></div>
+    <div class="hero-circle-2"></div>
+    <div class="hero-lines"></div>
+  </div>
+  <div class="hero-bar"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot"></div>
+      <span class="eyebrow-text">AHS Venture Limited · Dhaka, Bangladesh</span>
+    </div>
+    <h1>Empowering Bangladesh's Trade through <span class="accent">Strategic</span> <span class="b-accent">Regional</span> Partnerships.</h1>
+    <p class="hero-desc">A premier private limited company specializing in the importation and indenting of high-quality agricultural commodities and raw materials.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-red">View Our Services &rarr;</a>
+      <a href="#contact" class="btn-outline">Contact Our Team</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="h-stat">
+      <div class="h-stat-num">India</div>
+      <div class="h-stat-label">Primary Trade Partner</div>
+    </div>
+    <div class="h-stat">
+      <div class="h-stat-num">7+</div>
+      <div class="h-stat-label">Regional Nations</div>
+    </div>
+    <div class="h-stat">
+      <div class="h-stat-num">100%</div>
+      <div class="h-stat-label">Compliance Focused</div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-track"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-wrap">
+    <div class="about-l reveal">
+      <div class="sec-label">Company Overview</div>
+      <h2 class="dark">Reliability Driven by Experience.</h2>
+      <p class="about-body">AHS Venture Limited is a Dhaka-based firm dedicated to ensuring a consistent and reliable supply of essential agro products for the evolving Bangladeshi market. We leverage a deep understanding of regional trade dynamics to connect trusted international suppliers with local buyers.</p>
+      <div class="stat-row">
+        <div class="stat-cell">
+          <div class="sc-label">Primary Partner</div>
+          <div class="sc-val">🇮🇳 India</div>
+        </div>
+        <div class="stat-cell">
+          <div class="sc-label">Network Reach</div>
+          <div class="sc-val">7+ Nations</div>
+        </div>
+        <div class="stat-cell">
+          <div class="sc-label">Core Focus</div>
+          <div class="sc-val">Quality &amp; Compliance</div>
+        </div>
+        <div class="stat-cell">
+          <div class="sc-label">Commitment</div>
+          <div class="sc-val">Sustainability</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-r reveal" style="transition-delay:0.15s">
+      <div class="network-card">
+        <div class="nc-header">
+          <span style="font-size:18px;">🌐</span>
+          <span class="nc-header-title">Our Regional Trade Network</span>
+        </div>
+        <div class="nc-body">
+          <div class="nc-primary">
+            <div class="nc-p-flag">🇮🇳</div>
+            <div>
+              <div class="nc-p-label">Primary Partner</div>
+              <div class="nc-p-name">India</div>
+            </div>
+          </div>
+          <div class="nc-grid">
+            <div class="nc-country"><span class="flag">🇳🇵</span> Nepal</div>
+            <div class="nc-country"><span class="flag">🇧🇹</span> Bhutan</div>
+            <div class="nc-country"><span class="flag">🇨🇳</span> China</div>
+            <div class="nc-country"><span class="flag">🇲🇲</span> Myanmar</div>
+            <div class="nc-country"><span class="flag">🇹🇭</span> Thailand</div>
+            <div class="nc-country"><span class="flag">🇱🇰</span> Sri Lanka</div>
+            <div class="nc-country"><span class="flag">🇲🇻</span> Maldives</div>
+            <div class="nc-country"><span class="flag">🇧🇩</span> Bangladesh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-hd reveal">
+    <div class="sec-label light">What We Offer</div>
+    <h2 class="light">End-to-End Agro-Trade Solutions.</h2>
+  </div>
+  <div class="srv-grid">
+    <div class="srv-card reveal">
+      <span class="srv-num">01</span>
+      <span class="srv-icon">📦</span>
+      <div class="srv-title">Sourcing &amp; Procurement</div>
+      <p class="srv-desc">Importing agricultural commodities and raw materials from credible global suppliers with robust vetting processes and stringent quality controls at every stage.</p>
+    </div>
+    <div class="srv-card reveal" style="transition-delay:0.1s">
+      <span class="srv-num">02</span>
+      <span class="srv-icon">🤝</span>
+      <div class="srv-title">Indenting &amp; Trade Facilitation</div>
+      <p class="srv-desc">Acting as a trusted intermediary, providing market intelligence, documentation, and negotiation expertise for fully transparent and efficient trade operations.</p>
+    </div>
+    <div class="srv-card reveal" style="transition-delay:0.2s">
+      <span class="srv-num">03</span>
+      <span class="srv-icon">🚢</span>
+      <div class="srv-title">Logistics &amp; Compliance</div>
+      <p class="srv-desc">Managing customs clearance, shipping documentation, and quality assurance to meet Bangladesh's regulatory standards — from origin to final destination.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <div class="lead-grid">
+    <div class="lead-visual reveal">
+      <div class="lead-box">
+        <div class="lead-crest">
+          <span class="lead-crest-icon">🦁</span>
+          <span class="lead-crest-text">Leadership &amp; Integrity</span>
+        </div>
+      </div>
+      <div class="lead-badge">
+        <span class="lb-txt">Defense<br>Verified<br>Leadership</span>
+      </div>
+    </div>
+    <div class="lead-right reveal" style="transition-delay:0.15s">
+      <div class="sec-label">Our Leadership</div>
+      <h2 class="dark">Guided by Military Precision.</h2>
+      <p class="lead-intro">Our leadership team comprises distinguished retired Defense Officials of Bangladesh. This background instills a foundation of unwavering discipline, strategic foresight, and absolute trustworthiness in every partnership we forge.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-ico">🎯</div>
+          <div>
+            <div class="p-title">Strategic Vision</div>
+            <p class="p-body">Precision-driven execution and operational excellence at every stage of trade and logistics coordination.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-ico">⚖️</div>
+          <div>
+            <div class="p-title">Integrity</div>
+            <p class="p-body">Absolute trustworthiness in every partnership, transaction, and supplier relationship we manage.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-ico">📐</div>
+          <div>
+            <div class="p-title">Discipline</div>
+            <p class="p-body">Strategic acumen in trade planning, coordination, and delivering on commitments — every time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="vmv-header reveal">
+    <div class="sec-label light">Our Foundation</div>
+    <h2 class="light">Vision, Mission &amp; Values.</h2>
+  </div>
+  <div class="vmv-grid">
+    <div class="vmv-card reveal">
+      <span class="vmv-tag">Vision</span>
+      <div class="vmv-heading">Leading Bangladesh's Agro-Trade Future</div>
+      <p class="vmv-body">To be a leading Bangladeshi conglomerate in international agro-trade, setting benchmarks in quality and sustainable growth for generations to come.</p>
+    </div>
+    <div class="vmv-card reveal" style="transition-delay:0.1s">
+      <span class="vmv-tag">Mission</span>
+      <div class="vmv-heading">Exceptional Value Through World-Class Solutions</div>
+      <p class="vmv-body">To deliver exceptional value through world-class trade and supply chain solutions that connect the best global producers with Bangladesh's expanding markets.</p>
+    </div>
+    <div class="vmv-card reveal" style="transition-delay:0.2s">
+      <span class="vmv-tag">Core Values</span>
+      <ul class="vals-list">
+        <li class="val-item">
+          <div class="val-dot"></div>
+          <div>
+            <div class="val-title">Integrity &amp; Excellence</div>
+            <div class="val-desc">Transparency in every transaction and relationship.</div>
+          </div>
+        </li>
+        <li class="val-item">
+          <div class="val-dot"></div>
+          <div>
+            <div class="val-title">Reliability &amp; Innovation</div>
+            <div class="val-desc">Forward-looking trade solutions built on trust.</div>
+          </div>
+        </li>
+        <li class="val-item">
+          <div class="val-dot"></div>
+          <div>
+            <div class="val-title">Strategic Discipline</div>
+            <div class="val-desc">Building enduring regional trade ecosystems.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIPS -->
+<section id="partnerships">
+  <div class="pt-inner reveal">
+    <div class="sec-label" style="justify-content:center;">Strategic Outlook</div>
+    <h2 class="dark">Open to Joint Ventures &amp; Strategic Collaborations.</h2>
+    <p class="pt-txt">We are strategically positioned to connect global suppliers with Bangladesh's rapidly expanding agro industries. We actively seek Joint Ventures and collaborative partnerships with international entities looking to access the Bangladeshi market through a trusted, compliance-driven local partner.</p>
+    <div class="pt-tags">
+      <span class="pt-tag">Joint Ventures</span>
+      <span class="pt-tag">Import Partnerships</span>
+      <span class="pt-tag">Supply Chain Collaboration</span>
+      <span class="pt-tag">Regional Distributors</span>
+      <span class="pt-tag">Agro Exporters</span>
+    </div>
+    <a href="#contact" class="btn-red" style="display:inline-flex;margin:0 auto;">Explore Partnership Opportunities &rarr;</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-l reveal">
+      <div class="sec-label light">Get In Touch</div>
+      <h2 class="light">Let's Build Something Together.</h2>
+      <p class="contact-intro">Reach out to explore how AHS Venture Limited can serve your sourcing, indenting, or logistics needs across the region.</p>
+      <div class="c-items">
+        <div class="c-item">
+          <div class="c-ico">📍</div>
+          <div>
+            <div class="c-label">Address</div>
+            <div class="c-val">Plot #105, Park Road, New DOHS,<br>Mohakhali, Dhaka-1216, Bangladesh</div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">🌐</div>
+          <div>
+            <div class="c-label">Website</div>
+            <div class="c-val"><a href="http://www.ahsventureltd.com" target="_blank">www.ahsventureltd.com</a></div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">✉️</div>
+          <div>
+            <div class="c-label">Inquiry Types</div>
+            <div class="c-val">Trade · Sourcing · Partnership · General</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-box reveal" style="transition-delay:0.15s">
+      <div class="form-title">Send an Inquiry</div>
+      <div class="fg-row">
+        <div class="fg">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="fg">
+          <label>Company</label>
+          <input type="text" placeholder="Organization">
+        </div>
+      </div>
+      <div class="fg">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="fg">
+        <label>Inquiry Type</label>
+        <select>
+          <option value="">Select a category</option>
+          <option>Sourcing &amp; Procurement</option>
+          <option>Indenting &amp; Trade Facilitation</option>
+          <option>Logistics &amp; Compliance</option>
+          <option>Joint Venture / Partnership</option>
+          <option>General Inquiry</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Message</label>
+        <textarea placeholder="Describe your requirements or interest…"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitForm(this)">Send Inquiry &rarr;</button>
+    </div>
+  </div>
+  <footer>
+    <div class="ft-copy">&copy; 2026 AHS Venture Limited. All Rights Reserved.</div>
+    <div class="ft-web"><a href="http://www.ahsventureltd.com" target="_blank">www.ahsventureltd.com</a> &middot; Dhaka, Bangladesh</div>
+  </footer>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
+document.querySelectorAll(".nav-links a").forEach(a => {
+  a.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open"));
+});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+const secs = document.querySelectorAll("section[id]");
+window.addEventListener("scroll", () => {
+  let cur = "";
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    a.style.color = "";
+    if (a.getAttribute("href") === "#" + cur && !a.classList.contains("nav-cta")) a.style.color = "white";
+  });
+});
+
+function submitForm(btn) {
+  btn.textContent = "✓ Sent — We'll be in touch shortly.";
+  btn.style.background = "#15803d";
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
